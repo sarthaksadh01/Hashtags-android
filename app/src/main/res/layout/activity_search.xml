@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search"
+    android:background="@drawable/rounded_rect">
+
+    <ImageView
+        android:id="@+id/gift"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_17sdp"
+        android:src="@drawable/hashx" />
+
+    <TextView
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gift"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:text="Enter Hashtag to generate graphs" />
+
+
+    <EditText
+        android:layout_centerInParent="true"
+        android:inputType="textEmailAddress"
+        android:id="@+id/email"
+        android:hint="  #Hashtag"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/search" />
+
+    <Button
+        android:onClick="chutia"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:backgroundTint="#076585"
+        android:text="Search"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"
+        android:layout_marginTop="@dimen/_41sdp"
+
+        />
+
+
+
+
+
+</RelativeLayout>

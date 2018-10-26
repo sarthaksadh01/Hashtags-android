@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Graphs"
+    android:background="@drawable/rounded_rect2">
+    <RelativeLayout
+        android:id="@+id/data"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/hash"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="#076585"
+        android:text="#hashtag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:id="@+id/bar_chart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_alignParentBottom="true"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Total Tweets: " />
+    <LinearLayout
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:id="@+id/ac"
+        android:layout_below="@+id/bar_chart"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="#9796f0"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp" />
+        <TextView
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textColor="#ffffff"
+            android:text="YES"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/ac"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="#fbc7d4"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp" />
+        <TextView
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textColor="#ffffff"
+            android:text="No"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp" />
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="graph.json"
+            app:lottie_loop="true" />
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Generating Graph....." />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
